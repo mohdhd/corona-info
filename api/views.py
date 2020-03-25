@@ -14,5 +14,5 @@ class ListStateView(generics.ListAPIView):
     serializer_class = StateSerializer
 
 class ListNewsView(generics.ListAPIView):
-    queryset = News.objects.all()
+    queryset = News.objects.all().order_by('-date')
     serializer_class = NewsSerializer
